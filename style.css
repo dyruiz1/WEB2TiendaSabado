@@ -1,0 +1,42 @@
+.fondomovil{
+    background-image: url("img/imagen3.jpg");
+    background-attachment: fixed;
+    height: 450px;
+}
+
+.footer {
+    background: #64b8d4;
+    padding: 10px 0;
+  }
+  .footer a {
+    color: #f2f5f0;
+    font-size: 20px;
+    padding: 10px;
+    border-right: 1px solid #70726F;
+    transition: all .5s ease;
+  }
+  .footer a:first-child {
+    border-left: 1px solid #70726F;
+  }
+  .footer a:hover {
+    color: white;
+  }
+
+  .page-footer {
+    background: #141414;
+    padding: 1rem 0;
+
+  }
+
+ .noticias {
+    border-radius: 30px;
+    max-width: 100%;
+    box-shadow: 5px 5px 5px 5px #45bbbb;
+    transition: all;
+    transition-duration: 2s;
+    
+  }
+  .noticias:hover{
+    transform: rotate(20deg);
+  }
+  
