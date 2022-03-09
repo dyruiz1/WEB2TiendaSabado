@@ -1,42 +1,127 @@
 .fondomovil{
-    background-image: url("img/imagen3.jpg");
+    background-image: url("img/imagen1.jpg");
     background-attachment: fixed;
     height: 450px;
 }
 
 .footer {
-    background: #64b8d4;
-    padding: 10px 0;
-  }
-  .footer a {
-    color: #f2f5f0;
-    font-size: 20px;
-    padding: 10px;
-    border-right: 1px solid #70726F;
-    transition: all .5s ease;
-  }
-  .footer a:first-child {
-    border-left: 1px solid #70726F;
-  }
-  .footer a:hover {
-    color: white;
-  }
+  background: #64b8d4;
+  padding: 10px 0;
+}
+.footer a {
+  color: #f2f5f0;
+  font-size: 20px;
+  padding: 10px;
+  border-right: 1px solid #70726F;
+  transition: all .5s ease;
+}
+.footer a:first-child {
+  border-left: 1px solid #70726F;
+}
+.footer a:hover {
+  color: white;
+}
 
-  .page-footer {
-    background: #141414;
-    padding: 1rem 0;
+.page-footer {
+  background: #141414;
+  padding: 1rem 0;
 
-  }
+}
 
- .noticias {
-    border-radius: 30px;
-    max-width: 100%;
-    box-shadow: 5px 5px 5px 5px #45bbbb;
-    transition: all;
-    transition-duration: 2s;
-    
-  }
-  .noticias:hover{
-    transform: rotate(20deg);
-  }
+.noticias {
+  border-radius: 30px;
+  max-width: 100%;
+  box-shadow: 5px 5px 5px 5px #45bbbb;
+  transition: all;
+  transition-duration: 2s;
   
+}
+.noticias:hover{
+  transform: rotate(20deg);
+}
+
+#contenedor-productos {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  padding-top: 30px;
+}
+
+.caja-producto {
+  width: 300px;
+  height: 500px;
+  margin: 10px;
+}
+
+.producto-imagen {
+  height: 180px;
+  align-self: center;
+  margin: 10px;
+}
+#informacion_empresa{
+ color: green;
+} 
+
+.formulario_ingreso {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid black;
+  padding: 50px;
+  width: 500px;
+  margin: 50px auto;
+  font-family: "Amazon Ember",Arial,sans-serif;
+  font-size: 15px;
+  background-color: #f3ecea;
+}
+.button1{
+  border-radius: 10px;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  background-color: rgb(224, 110, 75);
+}
+.button1:hover {
+  background-color: #f3ecea;
+}
+.contraseña {
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-size: small;
+  color: gray;
+}
+label {
+  display: block;
+  margin-bottom: 3px;
+}
+label[for="terminos"] {
+  display: inline;
+}
+
+input, select {
+  width: 200px;
+  height: 30px;
+  margin-bottom: 15px;
+  padding: 5px;
+  box-sizing: border-box;
+}
+input[type="checkbox"] {
+  width: auto;
+  margin: 0;
+  padding: 0;
+  height: auto;
+}
+.imagenlogin { display: block; margin: auto; 
+}
+a{
+  color: black;
+  text-decoration: none;
+}
+
+.boton_formulario{
+  color: #f2f5f0;
+}
+
+
