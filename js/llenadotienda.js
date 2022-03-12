@@ -56,7 +56,7 @@ productosBD.forEach(function(producto){
     precioProducto.textContent = "$" + producto.precio
 
    // se pone el precio al producto
-   let descripcionProducto = document.createElement("p")
+   let descripcionProducto = document.createElement("h6")
    descripcionProducto.classList.add("card-text")
    descripcionProducto.textContent = producto.descripcion   
 

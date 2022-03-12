@@ -3,6 +3,7 @@
 import {pintarTienda} from "./llenadotienda.js";
 import {ampliarInformacion} from "./ampliarinfo.js";
 
+
 // llamando modulo pintar
 pintarTienda();
 
