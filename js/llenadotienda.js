@@ -1,5 +1,7 @@
 // arreglo de objetos
-let productosBD = [
+export function pintarTienda(){
+
+  let productosBD = [
     {nombre:"Calcetines", precio: 450000,foto:"img/calcetines.jpg", descripcion:"Tus pies lucirán mejor que nunca con tus nakamas preferidos!"},
     {nombre:"Figura Luffy", precio: 350000,foto:"img/figuraluffy.jpg", descripcion:"¡Decora tu habitación con estas fabulosas figuras de Sombrero de Paja!"},
     {nombre:"Figura Namy", precio: 60000,foto:"img/figuranamy.jpg", descripcion:"increíbles Figuras del la mejor navegante de One Piece."},
@@ -42,7 +44,7 @@ productosBD.forEach(function(producto){
     let cuerpoTarjeta = document.createElement("div")
     cuerpoTarjeta.classList.add("card-body")
 
-    // se crea el titulo de la tarjeta con el no,nre del producto
+    // se crea el titulo de la tarjeta con el nombre del producto
     let nombreProducto = document.createElement("h5")
     nombreProducto.classList.add("card-title")
     nombreProducto.classList.add("text-muted")
@@ -53,12 +55,12 @@ productosBD.forEach(function(producto){
     precioProducto.classList.add("card-text")
     precioProducto.textContent = "$" + producto.precio
 
-      // se pone el precio al producto
-      let descripcionProducto = document.createElement("p")
-      descripcionProducto.classList.add("card-text")
-      descripcionProducto.textContent = producto.descripcion
+   // se pone el precio al producto
+   let descripcionProducto = document.createElement("p")
+   descripcionProducto.classList.add("card-text")
+   descripcionProducto.textContent = producto.descripcion   
 
-    // se pone la informacion del producto
+    // se crea el boton
     let botonInfoProducto=document.createElement("button")
     botonInfoProducto.setAttribute("type","button")
     botonInfoProducto.classList.add("btn")
@@ -66,6 +68,10 @@ productosBD.forEach(function(producto){
     botonInfoProducto.classList.add("w-100")
     botonInfoProducto.classList.add("shadow")
     botonInfoProducto.textContent="ver producto"
+
+
+    // crear el boton para ampliar información
+  
 
 
     //PADRES E HIJOS
@@ -78,17 +84,17 @@ productosBD.forEach(function(producto){
     cuerpoTarjeta.appendChild(precioProducto)
     cuerpoTarjeta.appendChild(botonInfoProducto)
    
-
     tarjeta.appendChild(imagen)
     tarjeta.appendChild(divisor)
     tarjeta.appendChild(cuerpoTarjeta)
     columna.appendChild(tarjeta)
     contenedorProductos.appendChild(columna)
 
-    
-
-
 })
+}
+
+
+
 
 
 
