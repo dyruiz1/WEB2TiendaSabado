@@ -2,18 +2,18 @@
 export function pintarTienda(){
 
   let productosBD = [
-    {nombre:"Calcetines", precio: 450000,foto:"img/calcetines.jpg", descripcion:"Tus pies lucirán mejor que nunca con tus nakamas preferidos!"},
-    {nombre:"Figura Luffy", precio: 350000,foto:"img/figuraluffy.jpg", descripcion:"¡Decora tu habitación con estas fabulosas figuras de Sombrero de Paja!"},
-    {nombre:"Figura Namy", precio: 60000,foto:"img/figuranamy.jpg", descripcion:"increíbles Figuras del la mejor navegante de One Piece."},
-    {nombre:"Figura zoro", precio: 70000,foto:"img/figurazoro.jpg", descripcion:"¡Decora tu casa con estas increíbles figuras de Zoro!"},
-    {nombre:"Fruta akuma", precio: 300000,foto:"img/frutaakuma.jpg", descripcion:"¡Regala una Fruta del diablo de One Piece!¿Cuál eliges?"},
-    {nombre:"Funkos", precio: 850000,foto:"img/funko.jpg", descripcion:"Surca el mar y coleccionalos a todos"},
-    {nombre:"Llavero Luffy", precio: 650000,foto:"img/llaveroLuffy.jpg", descripcion:"Cambia ese aburrido llavero por uno de tu serie favorita."},
-    {nombre:"Denden Mushi", precio: 750000,foto:"img/denden.jpg", descripcion:"¿Cansado de tu iphone? ¡Regala un Den Den Mushi!."},
-    {nombre:"Termos", precio: 350000,foto:"img/termo.jpg", descripcion:"No te quedes con la boca seca en ningún momento, y asegúrate de tener cerca tus botellas de One Piece… ¿Cuál eliges?"},
-    {nombre:"Gorros", precio: 350000,foto:"img/sombrero.jpg", descripcion:"¿Te imaginas llevar el sombrero de paja que Shanks le regaló de Luffy?"},
-    {nombre:"Posters", precio: 27000,foto:"img/posters.jpg", descripcion:"Los carteles con las mayores recompensas de tus nakamas y las batallas más épicas."},
-    {nombre:"Pulseras", precio: 30000,foto:"img/pulseras.jpg", descripcion:"Ya puedes adornar tus brazos con estas bonitas pulseras de tu serie favorita."},
+    {nombre:"Calcetines", precio: 45000,foto:"img/calcetines.jpg", descripcion:"Tus pies lucirán mejor que nunca con tus nakamas preferidos!", tamaño: "Tamaño:Talla Única (Se adaptan con una increíble facilidad a cualquier tipo de pie debido a su calidad)", stock:"Disponible."},
+    {nombre:"Figura Luffy", precio: 35000,foto:"img/figuraluffy.jpg", descripcion:"¡Decora tu habitación con estas fabulosas figuras de Sombrero de Paja", tamaño: "Tamaño: 15cm", stock:"Disponible."},
+    {nombre:"Figura Namy", precio: 60000,foto:"img/figuranamy.jpg", descripcion:"increíbles Figuras del la mejor navegante de One Piece.", tamaño: "Tamaño: 15cm", stock:"Disponible."},
+    {nombre:"Figura zoro", precio: 70000,foto:"img/figurazoro.jpg", descripcion:"¡Decora tu casa con estas increíbles figuras de Zoro!", tamaño: "Tamaño: 15cm", stock:"Disponible."},
+    {nombre:"Fruta akuma", precio: 30000,foto:"img/frutaakuma.jpg", descripcion:"¡Regala una Fruta del diablo de One Piece!¿Cuál eliges?", tamaño: "Tamaño: 15cm", stock:"Disponible."},
+    {nombre:"Funkos", precio: 85000,foto:"img/funko.jpg", descripcion:"Surca el mar y coleccionalos a todos", tamaño: "Tamaño:12cm", stock:"Disponible."},
+    {nombre:"Llavero Luffy", precio: 65000,foto:"img/llaveroLuffy.jpg", descripcion:"Cambia ese aburrido llavero por uno de tu serie favorita.", tamaño: "Tamaño: 9.5", stock:"Disponible."},
+    {nombre:"Denden Mushi", precio: 7.000,foto:"img/denden.jpg", descripcion:"¿Cansado de tu iphone? ¡Regala un Den Den Mushi!.", tamaño: "Tamaño: 30cm", stock:"Disponible."},
+    {nombre:"Termos", precio: 30000,foto:"img/termo.jpg", descripcion:"No te quedes con la boca seca en ningún momento, y asegúrate de tener cerca tus botellas de One Piece… ¿Cuál eliges?", tamaño: "Tamaño: 250ml", stock:"Disponible."},
+    {nombre:"Gorros", precio: 35000,foto:"img/sombrero.jpg", descripcion:"¿Te imaginas llevar el sombrero de paja que Shanks le regaló de Luffy?", tamaño: "Tamaño: 13.58 x 9.61 x 2.4 pulgadas", stock:"Disponible."},
+    {nombre:"Posters", precio: 27000,foto:"img/posters.jpg", descripcion:"Los carteles con las mayores recompensas de tus nakamas y las batallas más épicas.", tamaño: "Tamaño: 27 x 39 pulgadas", stock:"Disponible."},
+    {nombre:"Pulseras", precio: 30000,foto:"img/pulseras.jpg", descripcion:"Ya puedes adornar tus brazos con estas bonitas pulseras de tu serie favorita.", tamaño: 'Tamaño: Diámetro:20"', stock:"Disponible."},
 ]
 // recorriendo un arreglo con JS, es decir buscar, seleccionar, esculcar
 // for each entra al arreglo, lo cuenta y repite la accion segun el numero de elementos
@@ -31,7 +31,7 @@ productosBD.forEach(function(producto){
     //  crear la tarjeta
     let tarjeta = document.createElement("div")
     tarjeta.classList.add("card")
-    tarjeta.classList.add("h-100")
+    tarjeta.classList.add("h-80")
     tarjeta.style = 'width: 18rem;'
 
     // creo la imagen
@@ -64,16 +64,23 @@ productosBD.forEach(function(producto){
     let botonInfoProducto=document.createElement("button")
     botonInfoProducto.setAttribute("type","button")
     botonInfoProducto.classList.add("btn")
-    botonInfoProducto.classList.add("btn-primary")
+    botonInfoProducto.classList.add("btn-warning")
     botonInfoProducto.classList.add("w-100")
     botonInfoProducto.classList.add("shadow")
     botonInfoProducto.textContent="ver producto"
 
+    // para el tamaño
+    let tamañoproducto = document.createElement("h7")
+    tamañoproducto.classList.add("card-text")
+    tamañoproducto.textContent = producto.tamaño 
+
+    // para la disponibilidad
+    let stockProducto = document.createElement("h4")
+    stockProducto.classList.add("card-text")
+    stockProducto.textContent = producto.stock 
 
     // crear el boton para ampliar información
   
-
-
     //PADRES E HIJOS
     // 2. ordernar la estructura
     // padres e hijos
@@ -83,6 +90,8 @@ productosBD.forEach(function(producto){
     cuerpoTarjeta.appendChild(descripcionProducto)
     cuerpoTarjeta.appendChild(precioProducto)
     cuerpoTarjeta.appendChild(botonInfoProducto)
+    cuerpoTarjeta.appendChild(tamañoproducto)
+    cuerpoTarjeta.appendChild(stockProducto)
    
     tarjeta.appendChild(imagen)
     tarjeta.appendChild(divisor)

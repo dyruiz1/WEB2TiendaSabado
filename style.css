@@ -48,7 +48,7 @@
 
 .caja-producto {
   width: 300px;
-  height: 500px;
+  height: 445px;
   margin: 10px;
 }
 
@@ -124,4 +124,31 @@ a{
   color: #f2f5f0;
 }
 
+.envios{
+  font-weight: bold;
+}
+body{
+  background-image: url("img/fondo.jpg");
+  background-attachment: fixed;
+}
+#stock{
+  color: darkgreen;
+  font-weight: bold;
+}
+#tamaño{
+  font-weight: bold;
+}
 
+.card-body h7,
+.card-body h4 {
+  display: none;
+}
+
+h6.card-text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* number of lines to show */
+          line-clamp: 3; 
+  -webkit-box-orient: vertical;
+}
