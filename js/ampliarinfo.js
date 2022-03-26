@@ -1,4 +1,5 @@
 export function ampliarInformacion(event){
+
     let producto = {}
     if(event.target.classList.contains("btn")){
         let modalinfoproducto = new bootstrap.Modal(document.getElementById('modalinfoproducto'))
@@ -22,7 +23,10 @@ export function ampliarInformacion(event){
         tamaño.textContent=producto.tamaño
         let stock= document.getElementById("stock")
         stock.textContent=producto.stock
+
+        return producto
     }
+
 }
 
 

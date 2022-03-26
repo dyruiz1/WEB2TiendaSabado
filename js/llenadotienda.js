@@ -18,7 +18,7 @@ export function pintarTienda(){
 // recorriendo un arreglo con JS, es decir buscar, seleccionar, esculcar
 // for each entra al arreglo, lo cuenta y repite la accion segun el numero de elementos
 
-// crear una referncia para traer el componente padre
+// crear una referncia para traer el componente padre, TRAVERSI
 let contenedorProductos = document.getElementById("contenedor-productos")
 
 productosBD.forEach(function(producto){
