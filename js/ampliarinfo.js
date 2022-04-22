@@ -1,8 +1,15 @@
-export function ampliarInformacion(event){
+export function ampliarInformacion(producto){
 
-    let producto = {}
+    document.getElementById("fotoinfo").src = producto.foto;
+    document.getElementById("nombreinfo").textContent = producto.nombre;
+    document.getElementById("precioinfo").textContent = producto.precio;
+    document.getElementById("tamaño").textContent = producto.tamaño;
+    document.getElementById("stock").textContent = producto.stock;
+    document.getElementById("cantidadProducto").value = 1;
+
+    /* let producto = {}
     if(event.target.classList.contains("btn")){
-        let modalinfoproducto = new bootstrap.Modal(document.getElementById('modalinfoproducto'))
+        
         modalinfoproducto.show()
         producto = {
             foto:event.target.parentElement.parentElement.querySelector("img").src,
@@ -25,7 +32,7 @@ export function ampliarInformacion(event){
         stock.textContent=producto.stock
 
         return producto
-    }
+    } */
 
 }
 

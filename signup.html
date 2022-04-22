@@ -4,10 +4,12 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Formulario Login</title>
+  <title>Formulario Registro</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <div class="alert alert-success" id="alert-success" role="alert"></div>
+  <div class="alert alert-danger" id="alert-danger" role="alert"></div>
   <div class="formulario_ingreso">
     <form target="_blank" method="get">
       <img src="img/equipo.jpg"alt="equipo" class="imagenlogin">
@@ -21,7 +23,16 @@
         </label>
        <br>
       <div>
-        <button type="submit" class="button1" id="botonRegistro"><a href="">Enviar</a></button>
+        <button type="submit" class="button1" id="botonRegistro"><a href="../Inicio/Inicio.html">Enviar</a></button>
+      </div>
+      <br><br>
+      <input type="checkbox" id="terminos" name="terminos" value="">
+      <label for="terminos"> Al crear una cuenta, aceptas las Condiciones de Uso y el Aviso de Privacidad de lohanaholistics.com</label> 
+      <br><br>
+      <p>¿Ya tienes una cuenta? <a href="login.html">Iniciar Sesión</a></p>
+      <br><br>
+      <div>
+        <button class="button1"><a href="index.html">Regresar</a></button>
       </div>
     </form> 
   </div>

@@ -156,3 +156,24 @@ h6.card-text {
 .icono{
   font-size: 30px;
 }
+
+main {
+  margin-top: 40px;
+}
+
+.filaFoto{
+  display: flex;
+  justify-content: center;
+}
+
+.fotoProducto{
+  height: 200px;
+  width: auto !important;
+}
+
+.totalCarrito {
+  display: flex !important;
+  justify-content: center;
+  font-size: 1.5em !important;
+  margin-top: 20px;
+}
