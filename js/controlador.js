@@ -7,11 +7,32 @@ import {pintarTienda} from "./llenadotienda.js";
 
 const modalInfoProducto = new bootstrap.Modal(document.getElementById('modalinfoproducto'))
 
+// codigo que maneja el cambio de simbolo de la moneda
+let currencySymbol = "$"
+let currencySelect = document.getElementById("currencySelect")
+currencySelect.addEventListener('change',function(event){
+    currencySymbol = event.target.value
+    // Cada vez que el simbolo de la moneda cambia, debemos actualizar toda la pagina, para poder ver el cambio
+    pintarTienda(modalInfoProducto, getPrecioConvertido)
+})
+
+function getPrecioConvertido(precio) {
+    if (currencySymbol === '$') {
+        return currencySymbol + " " + precio
+    } else if (currencySymbol === 'USD') {
+        return currencySymbol + " " + Math.round(precio / 3931)
+    } else if (currencySymbol === '€') {
+        return currencySymbol + " " + Math.round(precio / 4193)
+    }
+    return currencySymbol + " " + precio
+}
+
+
 //crear un objeto vacio
 let producto={}
 
 //Llamando al modulo de pintar
-pintarTienda(modalInfoProducto)
+pintarTienda(modalInfoProducto, getPrecioConvertido)
 
 //carrito es un arreglo de productos (arreglo de objetos)
 let carrito=[]
@@ -103,7 +124,7 @@ botonCarrito.addEventListener("click",function(event){
         nombre.classList.add("text-center")
 
         let precio = document.createElement("h5")
-        precio.textContent = "Valor unitario: " + producto.precio
+        precio.textContent = "Valor unitario: " + getPrecioConvertido(producto.precio)
         precio.classList.add("text-center")
 
         let cantidad = document.createElement("h5")
@@ -112,10 +133,11 @@ botonCarrito.addEventListener("click",function(event){
 
         let subtotal = document.createElement("h5")
         let subtotalValor = producto.cantidad * producto.precio
-        subtotal.textContent = "sub total: " + subtotalValor
+        subtotal.textContent = "sub total: " + getPrecioConvertido(subtotalValor)
         subtotal.classList.add("text-center")
 
         TOTAL = TOTAL + subtotalValor
+        
         
 
         // padres e hijas
@@ -133,10 +155,6 @@ botonCarrito.addEventListener("click",function(event){
 
     let total = document.createElement("h3")
     total.classList.add('totalCarrito', "badge", "bg-primary", "text-wrap")
-    total.innerHTML = "El total de su carrito es: $" + TOTAL
+    total.innerHTML = "El total de su carrito es: " + getPrecioConvertido(TOTAL)
     contenedor.appendChild(total)
 })
-
-
-// volver todo lo anterior una funcion
-// si el carrito esta vacio, salga una imagen o mensaje, es decir si la longitud es cero esta vacio el arreglo

@@ -1,7 +1,7 @@
 import {ampliarInformacion} from "./ampliarinfo.js";
 
 // arreglo de objetos
-export function pintarTienda(modalInfoProducto){
+export function pintarTienda(modalInfoProducto, getPrecioConvertido){
 
   let productosBD = [
     {id: 1, nombre:"Calcetines", precio: 45000,foto:"img/calcetines.jpg", descripcion:"Tus pies lucirán mejor que nunca con tus nakamas preferidos!", tamaño: "Tamaño:Talla Única (Se adaptan con una increíble facilidad a cualquier tipo de pie debido a su calidad)", stock:"Disponible."},
@@ -22,6 +22,7 @@ export function pintarTienda(modalInfoProducto){
 
   // crear una referncia para traer el componente padre, TRAVERSI
   let contenedorProductos = document.getElementById("contenedor-productos")
+  contenedorProductos.innerHTML = "";
 
   productosBD.forEach(function(producto){
     // console.log(producto)
@@ -55,7 +56,7 @@ export function pintarTienda(modalInfoProducto){
     // se pone el precio al producto
     let precioProducto = document.createElement("p")
     precioProducto.classList.add("card-text")
-    precioProducto.textContent = "$" + producto.precio
+    precioProducto.textContent = getPrecioConvertido(producto.precio)
 
     // se pone el precio al producto
     let descripcionProducto = document.createElement("h6")

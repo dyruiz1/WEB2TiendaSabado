@@ -177,3 +177,12 @@ main {
   font-size: 1.5em !important;
   margin-top: 20px;
 }
+.currency-container{
+  display: flex;
+  align-items: center;
+}
+.currency-container select {
+  width: 115px;
+  border-radius: 5px;
+  padding: 2px 5px;
+}
